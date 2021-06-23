@@ -2,15 +2,115 @@
 <html>
   <head>
     <title>Oncore</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+      <!-- Favicons -->
+    <link href="knight/assets/img/favicon.png" rel="icon">
+    <link href="knight/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">    
+
+    <!-- Vendor CSS Files -->
+    <link href="knight/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="knight/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="knight/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="knight/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="knight/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="knight/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="knight/assets/css/style.css" rel="stylesheet">  
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <style>
+.home_video {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    z-index: -2;
+   }
+
+   .home-video-wrapper {
+   height: 100vh;
+   display: flex;
+   }
+
+   h1.home {
+     color: white;
+   }
+
+  @media (max-width: 500px) {
+    #home-text {
+    font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    #home-text {
+    font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 1500px) {
+    #home-text {
+    font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 2500px) {
+    #home-text {
+    font-size: 4rem;
+    }
+  }
+
+  @media (min-width: 2501px) {
+    #home-text {
+    font-size: 5rem;
+    }
+  }
+
+   #home-text {
+    height: auto;
+    margin: auto;
+    //text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    //font-weight: bolder;
+   }
+       video {
+    filter: brightness(75%);
+ }
+
+  </style>
+
   </head>
 
   <body>
     <%= yield %>
+
+
+      <!-- Vendor JS Files -->
+      <script src="knight/assets/vendor/aos/aos.js"></script>
+      <script src="knight/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="knight/assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="knight/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="knight/assets/vendor/php-email-form/validate.js"></script>
+      <script src="knight/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+      <!-- Template Main JS File -->
+      <script src="knight/assets/js/main.js"></script>
+
+
+      <script>
+          window.scrollTo(0, 0);
+      </script>
   </body>
 </html>
