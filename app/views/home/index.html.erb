@@ -761,6 +761,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
+<!-- start of old form
             <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-left">
               <div class="row">
                 <div class="col-md-6 form-group">
@@ -783,11 +784,39 @@
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
+end of old form --> 
 
+      <%= form_for @message, data: {:aos => 'fade-left'} do |m| %>
+          <% if @message.errors.any? %>
+            <p>
+              <%= @message.errors.full_messages.join(', ') %>
+            </p>
+          <% end %>
+
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <%= m.text_field :name, placeholder: "Name", class: "form-control", id: "name", required: true %>
           </div>
 
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <%= m.email_field :email, placeholder: "Email", class: "form-control", id: "email", required: true %>
+          </div>
         </div>
+          
+          <div class="form-group mt-3">
+            <%= m.text_field :title, placeholder: "Title", class: "form-control", id: "subject", required: true %>
+          </div>
 
+          <div class="form-group mt-3">
+            <%= m.text_area :body, placeholder: "Body", class: "form-control", rows: "5", required: true %>
+          </div>
+
+          <div class="text-center">
+            <%= m.submit "Send Message" %>
+          </div>
+          <% end %>
+          </div>
+        </div>
       </div>
     </section><!-- End Contact Section -->
 
