@@ -5,6 +5,8 @@ ruby '3.0.1'
 
 gem 'letter_opener'
 
+gem 'delayed_job_web'
+
 gem 'delayed_job_active_record'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
