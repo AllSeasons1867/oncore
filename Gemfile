@@ -5,6 +5,8 @@ ruby '3.0.1'
 
 gem 'letter_opener'
 
+gem 'delayed_job_active_record'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use postgresql as the database for Active Record
