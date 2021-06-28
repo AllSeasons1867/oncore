@@ -24,7 +24,7 @@ class MessagesController < ApplicationController
       @message = Message.new(message_params)
   
       respond_to do |format|
-        if @message.save
+        if @message.save && verify_recaptcha(model: @message)
 
           AnswerMailer.notify_oncore_owner(@message).deliver_later
 
