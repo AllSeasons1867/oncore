@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   resources :home
   get "/", to: "home#index"
   resources :messages
+
+  
+
 end
